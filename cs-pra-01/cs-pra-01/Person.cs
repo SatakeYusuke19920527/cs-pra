@@ -8,6 +8,7 @@ namespace cs_pra_01
     {
         public string name;
         public int age;
+        public static string hello = "hello";
 
         public Person(string name, int age)
         {
@@ -15,7 +16,17 @@ namespace cs_pra_01
             this.age = age;
         }
 
+        ~Person()
+        {
+            Console.WriteLine("Hello world");
+        }
+
         public int MyProperty { get; set; }
+
+        public void ShowNameAndAge()
+        {
+            Console.WriteLine("name:" + this.name + " age: " + this.age);
+        }
 
     }
 }
